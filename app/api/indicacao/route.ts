@@ -118,9 +118,19 @@ async function enviarWebhook(d: Indicacao, recebidaEm: string) {
     signal: AbortSignal.timeout(10_000),
   });
   if (!resposta.ok) throw new Error(`Webhook respondeu ${resposta.status}`);
-  // O Apps Script responde 200 mesmo quando falha; o erro vem no corpo.
-  const json = await resposta.json().catch(() => null);
-  if (json && json.ok === false) throw new Error(`Webhook: ${json.erro}`);
+  // O Apps Script responde 200 mesmo quando falha (o erro vem no corpo) e,
+  // se a implantação não estiver pública, devolve uma página de login em HTML.
+  // Só conta como entregue se vier o JSON { ok: true } do script.
+  const texto = await resposta.text();
+  let json: { ok?: boolean; erro?: string } | null = null;
+  try {
+    json = JSON.parse(texto);
+  } catch {}
+  if (!json || json.ok !== true) {
+    throw new Error(
+      `Webhook não confirmou o recebimento: ${json?.erro ?? texto.slice(0, 200)}`,
+    );
+  }
 }
 
 export async function POST(request: Request) {
