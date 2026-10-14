@@ -70,17 +70,17 @@ export default function Home() {
     <>
       <div className="bg-[#ececea] text-xs text-neutral-700 sm:text-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-2">
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center gap-4 sm:gap-5">
             <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 whitespace-nowrap font-medium hover:text-[#009cb4] sm:gap-2">
               <FaWhatsapp className="h-4 w-4" />
               {site.telefone}
             </a>
-            <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-medium hover:text-[#009cb4]">
-              <FaInstagram className="h-4 w-4" />
+            <a href={site.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="-m-1 flex items-center gap-2 p-1 font-medium hover:text-[#009cb4] sm:m-0 sm:p-0">
+              <FaInstagram className="h-5 w-5 sm:h-4 sm:w-4" />
               <span className="hidden sm:inline">Instagram</span>
             </a>
-            <a href={site.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-medium hover:text-[#009cb4]">
-              <FaFacebook className="h-4 w-4" />
+            <a href={site.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="-m-1 flex items-center gap-2 p-1 font-medium hover:text-[#009cb4] sm:m-0 sm:p-0">
+              <FaFacebook className="h-5 w-5 sm:h-4 sm:w-4" />
               <span className="hidden sm:inline">Facebook</span>
             </a>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
         <section id="topo" className="relative scroll-mt-20 overflow-hidden bg-linear-to-b from-[#eaf7f9] to-white">
           <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#009cb4]/15 blur-3xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#17c3d6]/10 blur-3xl" />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-14 pt-10 md:grid-cols-2 md:py-24">
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-10 pt-10 md:grid-cols-2 md:py-24">
             <div>
               <Selo>Programa de indicação</Selo>
               <h1 className="mt-4 text-[2rem] font-extrabold leading-[1.15] text-[#3f3f3f] sm:text-5xl sm:leading-tight">
@@ -119,7 +119,7 @@ export default function Home() {
                 Você indica e a gente cuida de tudo. Recebe assim que o imóvel
                 for autorizado para anúncio — sem esperar a venda.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-6">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
                 <a href="#indicar" className="rounded-full bg-[#009cb4] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#009cb4]/25 transition hover:bg-[#007585]">
                   Indicar um imóvel agora
                 </a>
@@ -136,7 +136,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="sobre" className="relative scroll-mt-20 overflow-hidden bg-white py-16 md:py-24">
+        <section id="sobre" className="relative scroll-mt-20 overflow-hidden bg-white pb-16 pt-4 md:py-24">
           <div className="relative mx-auto max-w-6xl px-6">
             {/* Foto em faixa larga, no formato panorâmico dela */}
             <div className="relative">
