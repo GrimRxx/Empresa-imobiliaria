@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { regulamento } from "@/lib/regulamento";
+import Rodape from "@/components/Rodape";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -83,13 +84,7 @@ export default function Regulamento() {
         </article>
       </main>
 
-      <footer className="border-t-4 border-[#009cb4] bg-white py-8">
-        <div className="mx-auto flex max-w-3xl flex-wrap gap-x-4 gap-y-1 px-6 text-sm text-neutral-500">
-          <span>© {new Date().getFullYear()} {site.nome}</span>
-          <a href={`mailto:${site.email}`} className="hover:text-[#009cb4]">{site.email}</a>
-          <span>CRECI {site.creci}</span>
-        </div>
-      </footer>
+      <Rodape />
     </>
   );
 }

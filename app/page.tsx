@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiCheck } from "react-icons/fi";
 import IndicacaoForm from "@/components/IndicacaoForm";
+import Rodape from "@/components/Rodape";
 import { site } from "@/lib/site";
 
 const passos = [
@@ -279,21 +280,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t-4 border-[#009cb4] bg-white py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 sm:flex-row sm:items-center sm:justify-between">
-          <Image src="/logo-prosperar-imoveis.png" alt={site.nome} width={305} height={90} className="h-11 w-auto" />
-          <div className="flex flex-col gap-1 text-sm text-neutral-500 sm:items-end">
-            <p>© {new Date().getFullYear()} {site.nome}. Todos os direitos reservados.</p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
-              <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-[#009cb4]">{site.telefone}</a>
-              <a href={`mailto:${site.email}`} className="hover:text-[#009cb4]">{site.email}</a>
-              <span>CRECI {site.creci}</span>
-              <a href={site.regulamento} className="underline-offset-2 hover:text-[#009cb4] hover:underline">Regulamento</a>
-              <a href={site.politicaPrivacidade} className="underline-offset-2 hover:text-[#009cb4] hover:underline">Política de Privacidade</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Rodape />
     </>
   );
 }

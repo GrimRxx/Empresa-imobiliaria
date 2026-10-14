@@ -6,6 +6,11 @@ export const site = {
   instagram: "https://www.instagram.com/somosprosperar/",
   facebook: "https://www.facebook.com/priscillalima.corretora",
   email: "contato@prosperarimoveis.com.br",
+  // Dados da empresa conforme o regulamento do programa.
+  razaoSocial: "Prosperar Participações e Administração de Bens Ltda.",
+  cnpj: "52.187.664/0001-05",
+  endereco: "Avenida Dr. Vital Brasil, 1250, Vila São Lucio, Botucatu, SP, CEP 18603-193",
+  mapa: "https://www.google.com/maps/search/?api=1&query=Avenida+Dr.+Vital+Brasil+1250+Botucatu+SP",
   // Valor pago por captação: depende do contrato assinado pelo proprietário.
   valorSemExclusividade: "R$ 100",
   valorComExclusividade: "R$ 150",
