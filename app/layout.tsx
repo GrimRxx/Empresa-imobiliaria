@@ -11,7 +11,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Indique um Imóvel e Ganhe | Prosperar Imóveis",
   description:
-    "Conhece alguém vendendo um imóvel? Indique para a Prosperar Imóveis e ganhe uma comissão assim que a captação for confirmada.",
+    "Conhece alguém vendendo um imóvel? Indique para a Prosperar Imóveis e ganhe de R$ 100 a R$ 150 por captação confirmada.",
 };
 
 export default function RootLayout({

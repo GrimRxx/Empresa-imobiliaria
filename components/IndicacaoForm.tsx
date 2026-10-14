@@ -264,7 +264,8 @@ export default function IndicacaoForm() {
           />
           <span>
             Confirmo que o proprietário sabe que estou compartilhando esses dados
-            com a {site.nome} para fins de contato comercial.
+            com a {site.nome} para fins de contato comercial e declaro que tenho
+            autorização para isso, sendo responsável pelas informações prestadas.
           </span>
         </label>
         {erros.consentimento && (
@@ -278,13 +279,31 @@ export default function IndicacaoForm() {
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={status === "enviando"}
-        className="w-full rounded-full bg-[#009cb4] px-8 py-3.5 text-base font-semibold text-white transition hover:bg-[#007c90] disabled:cursor-wait disabled:opacity-70 sm:w-auto"
-      >
-        {status === "enviando" ? "Enviando..." : "Enviar indicação"}
-      </button>
+      <div className="space-y-3">
+        <button
+          type="submit"
+          disabled={status === "enviando"}
+          className="w-full rounded-full bg-[#009cb4] px-8 py-3.5 text-base font-semibold text-white transition hover:bg-[#007c90] disabled:cursor-wait disabled:opacity-70 sm:w-auto"
+        >
+          {status === "enviando" ? "Enviando..." : "Enviar indicação"}
+        </button>
+
+        <p className="text-xs leading-relaxed text-neutral-500">
+          Ao enviar, você concorda com o uso dos seus dados e dos dados do
+          proprietário exclusivamente para contato comercial sobre este imóvel,
+          conforme nossa{" "}
+          {/* Nova aba: quem está preenchendo não perde o que já digitou */}
+          <a
+            href={site.politicaPrivacidade}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-[#007585] underline underline-offset-2"
+          >
+            Política de Privacidade
+          </a>
+          .
+        </p>
+      </div>
     </form>
   );
 }

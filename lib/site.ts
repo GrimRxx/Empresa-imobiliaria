@@ -6,7 +6,13 @@ export const site = {
   instagram: "https://www.instagram.com/somosprosperar/",
   facebook: "https://www.facebook.com/priscillalima.corretora",
   email: "contato@prosperarimoveis.com.br",
-  valorIndicacao: "R$ 100",
+  // Valor pago por captação: depende do contrato assinado pelo proprietário.
+  valorSemExclusividade: "R$ 100",
+  valorComExclusividade: "R$ 150",
+  valorFaixa: "R$ 100 a R$ 150",
+  regulamento: "/regulamento",
+  // A proteção de dados (LGPD) está na seção 10 do regulamento.
+  politicaPrivacidade: "/regulamento#da-protecao-de-dados-lgpd",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
   // Para trocar, salve a nova foto em public/images/ e altere o caminho aqui.
   imagemCasa: "/images/casa.jpg",

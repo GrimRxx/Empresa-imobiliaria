@@ -18,7 +18,7 @@ const passos = [
   {
     titulo: "Captação confirmada, você recebe",
     texto:
-      "Se o proprietário autorizar a Prosperar Imóveis a anunciar o imóvel, sua indicação é paga — mesmo que a venda ainda não tenha acontecido.",
+      `Se o proprietário autorizar a Prosperar Imóveis a anunciar o imóvel, sua indicação é paga: ${site.valorSemExclusividade} sem exclusividade ou ${site.valorComExclusividade} com exclusividade de 90 dias — mesmo que a venda ainda não tenha acontecido.`,
   },
 ];
 
@@ -37,8 +37,12 @@ const duvidas = [
       "Não. Qualquer pessoa pode indicar um imóvel que um amigo, parente ou conhecido esteja vendendo.",
   },
   {
-    pergunta: "Quando eu recebo a comissão?",
-    resposta: `Você recebe assim que o proprietário autorizar formalmente a ${site.nome} a anunciar o imóvel para venda (captação). Não é necessário esperar a venda ser concluída.`,
+    pergunta: "Quando eu recebo a bonificação?",
+    resposta: `Você recebe assim que o proprietário autorizar formalmente a ${site.nome} a anunciar o imóvel para venda (captação). O valor é ${site.valorSemExclusividade} ou ${site.valorComExclusividade}, conforme o contrato de exclusividade assinado pelo proprietário. Não é necessário esperar a venda ser concluída: o pagamento é feito via Pix em até 10 dias úteis após a confirmação da captação.`,
+  },
+  {
+    pergunta: "Por que existem dois valores?",
+    resposta: `O valor depende do contrato que o proprietário assinar: ${site.valorSemExclusividade} quando a captação é sem exclusividade (o imóvel pode ficar anunciado também por outras imobiliárias) e ${site.valorComExclusividade} quando o proprietário assina contrato de exclusividade de 90 dias com a ${site.nome}. Quem decide é o proprietário — você recebe conforme o contrato fechado.`,
   },
   {
     pergunta: "E se o proprietário não quiser fechar com vocês?",
@@ -48,7 +52,7 @@ const duvidas = [
   {
     pergunta: "Posso indicar mais de um imóvel?",
     resposta:
-      "Sim, não há limite. Cada imóvel captado a partir da sua indicação gera uma nova comissão.",
+      "Sim, não há limite. Cada imóvel captado a partir da sua indicação gera uma nova bonificação.",
   },
   {
     pergunta: "Como vou saber se minha indicação virou captação?",
@@ -112,8 +116,8 @@ export default function Home() {
             <div>
               <Selo>Programa de indicação</Selo>
               <h1 className="mt-4 text-[2rem] font-extrabold leading-[1.15] text-[#3f3f3f] sm:text-5xl sm:leading-tight">
-                Conhece alguém vendendo um imóvel? Indique e ganhe{" "}
-                <span className="text-[#009cb4]">{site.valorIndicacao}</span>.
+                Conhece alguém vendendo um imóvel? Indique e ganhe de{" "}
+                <span className="whitespace-nowrap text-[#009cb4]">{site.valorFaixa}</span>.
               </h1>
               <p className="mt-5 text-base text-neutral-600 sm:text-lg">
                 Você indica e a gente cuida de tudo. Recebe assim que o imóvel
@@ -202,9 +206,13 @@ export default function Home() {
               <span className="inline-flex h-8 w-8 shrink-0 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-[#009cb4]/10 text-base font-bold text-[#009cb4]">!</span>
               <p>
                 <strong>Importante:</strong> este programa é destinado a pessoas
-                físicas que queiram indicar imóveis para a {site.nome} captar para
-                venda. Não é necessário ser corretor para indicar — basta conhecer
-                alguém que esteja vendendo um imóvel.
+                físicas maiores de 18 anos que queiram indicar imóveis para a{" "}
+                {site.nome} captar para venda. Não é necessário ser corretor para
+                indicar — basta conhecer alguém que esteja vendendo um imóvel.{" "}
+                <a href={site.regulamento} className="font-semibold text-[#007585] underline underline-offset-2">
+                  Confira o regulamento completo
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -219,10 +227,21 @@ export default function Home() {
                 <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -right-16 h-64 w-64 rounded-full bg-white/10" />
                 <div className="relative flex h-full flex-col justify-center">
                   <h2 className="text-2xl font-extrabold text-white sm:text-3xl">Indicação simples</h2>
-                  <span className="mt-3 inline-block w-fit whitespace-nowrap rounded-full bg-white px-3.5 py-1.5 text-xs font-bold text-[#007585] sm:px-4 sm:text-sm">
-                    {site.valorIndicacao} por captação confirmada
-                  </span>
-                  <ul className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
+                  <div className="mt-4 w-fit rounded-2xl bg-white px-4 py-3 shadow-lg shadow-black/10">
+                    <p className="text-xl font-extrabold leading-tight text-[#007585] sm:text-2xl">{site.valorFaixa}</p>
+                    <p className="text-xs text-neutral-600 sm:text-sm">por captação confirmada</p>
+                  </div>
+                  <div className="mt-4 space-y-2 text-sm text-white">
+                    <p className="flex items-baseline gap-2">
+                      <strong className="shrink-0 text-base">{site.valorSemExclusividade}</strong>
+                      <span className="text-white/90">por captação sem exclusividade</span>
+                    </p>
+                    <p className="flex items-baseline gap-2">
+                      <strong className="shrink-0 text-base">{site.valorComExclusividade}</strong>
+                      <span className="text-white/90">por captação com exclusividade de 90 dias</span>
+                    </p>
+                  </div>
+                  <ul className="mt-6 space-y-3 border-t border-white/20 pt-6 sm:mt-8 sm:space-y-4 sm:pt-8">
                     {vantagens.map((v) => (
                       <li key={v} className="flex items-start gap-3">
                         <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/15">
@@ -269,6 +288,8 @@ export default function Home() {
               <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-[#009cb4]">{site.telefone}</a>
               <a href={`mailto:${site.email}`} className="hover:text-[#009cb4]">{site.email}</a>
               <span>CRECI {site.creci}</span>
+              <a href={site.regulamento} className="underline-offset-2 hover:text-[#009cb4] hover:underline">Regulamento</a>
+              <a href={site.politicaPrivacidade} className="underline-offset-2 hover:text-[#009cb4] hover:underline">Política de Privacidade</a>
             </div>
           </div>
         </div>
