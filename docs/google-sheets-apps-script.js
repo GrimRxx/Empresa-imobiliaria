@@ -28,10 +28,13 @@ const COLUNAS = [
   ["indicadorEmail", "E-mail de quem indicou"],
 ];
 
-// Impede que um texto digitado no formulário vire fórmula na planilha.
+// Grava como texto, do jeito que foi digitado: impede que vire fórmula
+// e que números (CPF na chave Pix, valores) percam zeros ou formatação.
 function seguro(valor) {
   const texto = String(valor || "");
-  return /^[=+\-@]/.test(texto) ? "'" + texto : texto;
+  return /^[=+\-@]/.test(texto) || /^[\d\s.,()\/-]+$/.test(texto)
+    ? "'" + texto
+    : texto;
 }
 
 function doPost(e) {
@@ -50,6 +53,7 @@ function doPost(e) {
     );
     aba.appendRow(linha.concat("Nova"));
     aba.getRange(aba.getLastRow(), 1).setNumberFormat("dd/MM/yyyy HH:mm");
+    aba.autoResizeColumns(1, COLUNAS.length + 1);
     return resposta({ ok: true });
   } catch (erro) {
     return resposta({ ok: false, erro: String(erro) });
