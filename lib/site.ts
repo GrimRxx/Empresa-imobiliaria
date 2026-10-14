@@ -3,8 +3,8 @@ export const site = {
   creci: "053790-J",
   telefone: "(14) 99606-1900",
   whatsapp: "https://wa.me/5514996061900",
-  instagram: "#",
-  facebook: "#",
+  instagram: "https://www.instagram.com/somosgrupoprosperar/",
+  facebook: "https://www.facebook.com/priscillalima.corretora",
   email: "contato@prosperarimoveis.com.br",
   valorIndicacao: "R$ 100",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
