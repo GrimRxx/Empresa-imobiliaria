@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 type Status = "idle" | "enviando" | "sucesso" | "erro";
 
 const inputBase =
-  "w-full rounded-lg border px-3.5 py-2.5 text-sm text-[#3f3f3f] outline-none transition focus:border-[#009cb4] focus:ring-2 focus:ring-[#009cb4]/20";
+  "w-full rounded-lg border px-3.5 py-2.5 text-base text-[#3f3f3f] outline-none sm:text-sm transition focus:border-[#009cb4] focus:ring-2 focus:ring-[#009cb4]/20";
 
 function Campo({
   label,
@@ -172,7 +172,7 @@ export default function IndicacaoForm() {
             <input
               type="text"
               className={classe("indicadorPix")}
-              placeholder="CPF, e-mail, telefone ou chave aleatória"
+              placeholder="CPF, celular, e-mail ou aleatória"
               value={dados.indicadorPix}
               onChange={(e) => alterar("indicadorPix", e.target.value)}
             />
