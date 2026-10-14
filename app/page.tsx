@@ -148,7 +148,7 @@ export default function Home() {
             <div className="relative">
               <div aria-hidden="true" className="absolute -inset-3 rounded-tl-[4.5rem] rounded-br-[4.5rem] rounded-tr-3xl rounded-bl-3xl border border-[#009cb4]/25 sm:-inset-5" />
               <div className="relative aspect-[16/10] overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl shadow-2xl shadow-[#007585]/15 sm:aspect-[762/258] sm:rounded-tl-[4rem] sm:rounded-br-[4rem]">
-                <Image src={site.imagemCasa} unoptimized={site.imagemCasa.endsWith(".svg")} alt="Casas de alto padrão com fachada em tijolinho e jardim" fill sizes="(min-width: 1152px) 1104px, 100vw" className="object-cover object-[30%_50%]" />
+                <Image src={site.imagemCasa} unoptimized={site.imagemCasa.endsWith(".svg")} alt="Casas de alto padrão com fachada em tijolinho e jardim" fill quality={90} sizes="(min-width: 1152px) 1104px, 100vw" className="object-cover object-[30%_50%]" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#007585]/25 via-transparent to-transparent" />
               </div>
             </div>
