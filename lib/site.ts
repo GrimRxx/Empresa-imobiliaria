@@ -8,6 +8,6 @@ export const site = {
   email: "contato@prosperarimoveis.com.br",
   valorIndicacao: "R$ 100",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
-  // Quando a foto chegar, salve em public/images/ (ex.: casa.jpg) e troque aqui.
-  imagemCasa: "/images/casa.svg",
+  // Para trocar, salve a nova foto em public/images/ e altere o caminho aqui.
+  imagemCasa: "/images/casa.jpg",
 };

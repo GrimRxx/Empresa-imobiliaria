@@ -25,12 +25,19 @@ hospedagem (ex.: Vercel → Settings → Environment Variables) ou num arquivo
 2. **Planilha Google** – `INDICACAO_WEBHOOK_URL`. Passo a passo em
    `docs/google-sheets-apps-script.js`.
 
-Usar os dois é o mais seguro: se um falhar, a indicação não se perde.
+Configurado com os dois, cada indicação chega no e-mail **e** vira uma linha na
+planilha (Data, quem indicou, telefone, proprietário, telefone, endereço, tipo,
+valor desejado, observações e chave Pix). Se um dos dois falhar, o outro ainda
+recebe e a falha fica registrada no log do servidor.
+
+Depois de enviar, a pessoa vê na tela: "Indicação enviada! Entraremos em contato
+em até 48h." 
 
 ## Trocar a foto da casa
 
-Salve a foto em `public/images/` (ex.: `casa.jpg`) e altere `imagemCasa` em
-`lib/site.ts`. Ela aparece na seção "A Prosperar" e no fundo do bloco do
+A foto atual é `public/images/casa.jpg`. Para trocar, salve a nova foto em
+`public/images/` e altere `imagemCasa` em `lib/site.ts`. Fotos largas
+(panorâmicas) ficam melhores, porque a seção mostra a imagem numa faixa larga. Ela aparece na seção "A Prosperar" e no fundo do bloco do
 formulário.
 
 ## Hospedagem

@@ -143,26 +143,30 @@ export default function Home() {
         </section>
 
         <section id="sobre" className="relative scroll-mt-32 overflow-hidden bg-white py-16 md:py-24">
-          <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2">
-            <div className="relative order-2 md:order-1">
-              <div className="absolute -inset-4 rounded-[2.5rem] border border-[#009cb4]/25 sm:-inset-6" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl shadow-2xl shadow-black/10 sm:aspect-[4/3]">
-                <Image src={site.imagemCasa} unoptimized={site.imagemCasa.endsWith(".svg")} alt="Casa" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <div className="relative mx-auto max-w-6xl px-6">
+            {/* Foto em faixa larga, no formato panorâmico dela */}
+            <div className="relative">
+              <div aria-hidden="true" className="absolute -inset-3 rounded-tl-[4.5rem] rounded-br-[4.5rem] rounded-tr-3xl rounded-bl-3xl border border-[#009cb4]/25 sm:-inset-5" />
+              <div className="relative aspect-[16/10] overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl shadow-2xl shadow-[#007585]/15 sm:aspect-[762/258] sm:rounded-tl-[4rem] sm:rounded-br-[4rem]">
+                <Image src={site.imagemCasa} unoptimized={site.imagemCasa.endsWith(".svg")} alt="Casas de alto padrão com fachada em tijolinho e jardim" fill sizes="(min-width: 1152px) 1104px, 100vw" className="object-cover object-[30%_50%]" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#007585]/25 via-transparent to-transparent" />
               </div>
             </div>
-            <div className="order-1 md:order-2">
-              <Selo>A Prosperar Imóveis</Selo>
-              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#3f3f3f] sm:text-4xl">
-                Melhor que enriquecer,{" "}
-                <span className="text-[#009cb4]">prosperar é crescer junto</span>
-              </h2>
-              <p className="mt-4 text-neutral-600">
-                Fazemos parte do Grupo Prosperar, que administra patrimônio,
-                empreendimentos e negócios com solidez e visão de longo prazo.
-                Nosso programa de indicação é uma forma de fazer quem está perto
-                da gente prosperar também.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-3">
+            <div className="mt-12 grid items-start gap-10 md:mt-16 md:grid-cols-2 md:gap-14">
+              <div>
+                <Selo>A Prosperar Imóveis</Selo>
+                <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#3f3f3f] sm:text-4xl">
+                  Melhor que enriquecer,{" "}
+                  <span className="text-[#009cb4]">prosperar é crescer junto</span>
+                </h2>
+                <p className="mt-4 text-neutral-600">
+                  Fazemos parte do Grupo Prosperar, que administra patrimônio,
+                  empreendimentos e negócios com solidez e visão de longo prazo.
+                  Nosso programa de indicação é uma forma de fazer quem está perto
+                  da gente prosperar também.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:mt-12">
                 {valores.map((v) => (
                   <div key={v} className="rounded-xl border border-[#009cb4]/15 bg-[#009cb4]/5 px-4 py-3 text-sm font-semibold text-[#007585]">
                     {v}

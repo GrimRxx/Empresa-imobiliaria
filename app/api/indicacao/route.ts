@@ -95,7 +95,9 @@ async function enviarEmail(d: Indicacao, recebidaEm: string) {
     host: process.env.SMTP_HOST,
     port,
     secure: port === 465,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    auth: process.env.SMTP_USER
+      ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
+      : undefined,
   });
   const { texto, html } = montarEmail(d, recebidaEm);
   await transporte.sendMail({
@@ -116,6 +118,9 @@ async function enviarWebhook(d: Indicacao, recebidaEm: string) {
     signal: AbortSignal.timeout(10_000),
   });
   if (!resposta.ok) throw new Error(`Webhook respondeu ${resposta.status}`);
+  // O Apps Script responde 200 mesmo quando falha; o erro vem no corpo.
+  const json = await resposta.json().catch(() => null);
+  if (json && json.ok === false) throw new Error(`Webhook: ${json.erro}`);
 }
 
 export async function POST(request: Request) {

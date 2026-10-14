@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import {
   formatarTelefone,
@@ -44,6 +44,14 @@ export default function IndicacaoForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [mensagemErro, setMensagemErro] = useState("");
   const [empresa, setEmpresa] = useState(""); // armadilha anti-spam
+  const confirmacaoRef = useRef<HTMLDivElement>(null);
+
+  // No celular o formulário é longo: leva a pessoa até a confirmação.
+  useEffect(() => {
+    if (status === "sucesso") {
+      confirmacaoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
 
   function alterar<K extends keyof Indicacao>(campo: K, valor: Indicacao[K]) {
     setDados((d) => ({ ...d, [campo]: valor }));
@@ -87,14 +95,17 @@ export default function IndicacaoForm() {
 
   if (status === "sucesso") {
     return (
-      <div className="flex h-full flex-col items-start justify-center gap-4 py-10">
+      <div
+        ref={confirmacaoRef}
+        role="status"
+        className="flex h-full flex-col items-start justify-center gap-4 py-10"
+      >
         <FiCheckCircle className="h-12 w-12 text-[#009cb4]" />
         <h3 className="text-2xl font-extrabold text-[#3f3f3f]">
           Indicação enviada!
         </h3>
-        <p className="text-neutral-600">
-          Obrigado por indicar. Nossa equipe vai falar com o proprietário e
-          retorna para você em até 48h pelo telefone informado.
+        <p className="text-lg text-neutral-600">
+          Entraremos em contato em até 48h.
         </p>
         <button
           type="button"
