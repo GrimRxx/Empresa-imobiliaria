@@ -132,10 +132,6 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl shadow-2xl shadow-[#007585]/15">
                 <Image src="/images/hero-interior.jpg" alt="" fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
               </div>
-              <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white px-5 py-4 shadow-xl shadow-black/10 ring-1 ring-neutral-100">
-                <p className="text-2xl font-extrabold text-[#009cb4]">{site.valorIndicacao}</p>
-                <p className="text-sm text-neutral-600">por captação confirmada</p>
-              </div>
             </div>
           </div>
         </section>
