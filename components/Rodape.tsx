@@ -93,7 +93,7 @@ export default function Rodape() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-3 border-t border-white/10 py-8 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.nome} · {site.razaoSocial} CNPJ {site.cnpj}. CRECI {site.creci}.
+            © {new Date().getFullYear()} {site.nome} · {site.razaoSocial} CNPJ {site.cnpj}. CRECI/SP {site.creci}.
             Todos os direitos reservados.
           </p>
           <a href={site.politicaPrivacidade} className="shrink-0 hover:text-white">

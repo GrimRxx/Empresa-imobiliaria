@@ -2,11 +2,11 @@
 export const regulamento = {
   "titulo": "Regulamento do Programa de Indicação \"Indique um Imóvel e Ganhe\"",
   "info": [
-    "Prosperar Imóveis — Vigência: a partir de outubro de 2026",
-    "Prosperar Imóveis — CRECI 053790-J",
+    "Prosperar Imóveis — CRECI/SP 053790-J",
+    "Vigência: a partir de outubro de 2026",
     "Razão social: Prosperar Participações e Administração de Bens Ltda.",
     "CNPJ: 52.187.664/0001-05",
-    "Endereço: Avenida Dr. Vital Brasil, 1250 — Vila São Lucio, Botucatu/SP — CEP 18603-193",
+    "Endereço: Avenida Dr. Vital Brasil, 1250 — Vila São Lúcio, Botucatu/SP — CEP 18603-193",
     "Contato: contato@prosperarimoveis.com.br | (14) 99606-1900"
   ],
   "secoes": [
@@ -16,7 +16,7 @@ export const regulamento = {
       "itens": [
         "1.1. O Programa de Indicação \"Indique um Imóvel e Ganhe\" (o \"Programa\") é uma iniciativa da Prosperar Imóveis que bonifica pessoas físicas que indiquem imóveis disponíveis para venda, com o objetivo de captar novos imóveis para anúncio.",
         "1.2. A participação no Programa é gratuita, voluntária e individual, e não exige vínculo empregatício, societário ou de representação comercial com a Prosperar Imóveis.",
-        "1.3. O Programa não é uma atividade de intermediação imobiliária: o indicador apenas informa a existência de um imóvel e do respectivo proprietário; toda a negociação, captação e venda é conduzida exclusivamente pela Prosperar Imóveis, por meio de corretores habilitados."
+        "1.3. O Programa não é uma atividade de intermediação imobiliária: o indicador apenas informa a existência de um imóvel e do respectivo proprietário; toda a negociação, a captação e a venda são conduzidas exclusivamente pela Prosperar Imóveis, por meio de corretores habilitados."
       ]
     },
     {
@@ -34,7 +34,7 @@ export const regulamento = {
       "itens": [
         "3.1. O indicador preenche o formulário disponível na página oficial do Programa, informando: seus dados (nome completo, telefone/WhatsApp, e-mail opcional e chave Pix opcional), os dados do proprietário (nome e telefone) e os dados do imóvel (endereço, tipo e valor aproximado desejado, opcional).",
         "3.2. Ao enviar o formulário, o indicador declara e garante que: a) as informações prestadas são verdadeiras; b) possui autorização do proprietário para compartilhar os dados dele; c) o proprietário sabe que será contatado pela Prosperar Imóveis.",
-        "3.3. A Prosperar Imóveis entrará em contato com o proprietário em até 48 horas (2 dias úteis) após o recebimento da indicação."
+        "3.3. A Prosperar Imóveis entrará em contato com o proprietário em até 2 (dois) dias úteis após o recebimento da indicação."
       ]
     },
     {

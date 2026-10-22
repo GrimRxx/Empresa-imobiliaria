@@ -105,7 +105,7 @@ export default function IndicacaoForm() {
           Indicação enviada!
         </h3>
         <p className="text-lg text-neutral-600">
-          Entraremos em contato em até 48h.
+          Entraremos em contato em até 2 dias úteis.
         </p>
         <button
           type="button"
@@ -120,19 +120,17 @@ export default function IndicacaoForm() {
 
   return (
     <form onSubmit={enviar} noValidate className="space-y-8">
-      {/* Campo invisível para pessoas; robôs costumam preencher */}
-      <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
-        <label>
-          Empresa
-          <input
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            value={empresa}
-            onChange={(e) => setEmpresa(e.target.value)}
-          />
-        </label>
-      </div>
+      {/* Campo invisível para pessoas, sem texto visível; robôs costumam preencher */}
+      <input
+        type="text"
+        name="empresa"
+        aria-hidden="true"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        value={empresa}
+        onChange={(e) => setEmpresa(e.target.value)}
+      />
 
       <fieldset className="space-y-4">
         <legend className="text-base font-bold text-[#3f3f3f]">1. Seus dados</legend>

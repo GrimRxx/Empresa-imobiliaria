@@ -45,7 +45,7 @@ export default function Regulamento() {
 
           <nav aria-label="Índice" className="mt-8">
             <p className="text-xs font-bold uppercase tracking-widest text-[#009cb4]">Índice</p>
-            <ol className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2">
+            <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2">
               {regulamento.secoes.map((s) => (
                 <li key={s.id}>
                   <a href={`#${s.id}`} className="text-[#007585] hover:underline">
@@ -53,7 +53,7 @@ export default function Regulamento() {
                   </a>
                 </li>
               ))}
-            </ol>
+            </ul>
           </nav>
 
           <div className="mt-10 space-y-10">

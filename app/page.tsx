@@ -14,7 +14,7 @@ const passos = [
   {
     titulo: "Nós entramos em contato",
     texto:
-      "Em até 48h nossa equipe fala com o proprietário, apresenta a proposta e busca a autorização para anunciar (captação) o imóvel.",
+      "Em até 2 dias úteis nossa equipe fala com o proprietário, apresenta a proposta e busca a autorização para anunciar (captação) o imóvel.",
   },
   {
     titulo: "Captação confirmada, você recebe",
@@ -27,19 +27,19 @@ const valores = ["Séria", "Moderna", "Sólida", "Sábia"];
 
 const vantagens = [
   "Você não precisa vender nada, só indicar",
-  "Pagamento garantido após a captação",
+  "Pago após a captação confirmada",
   "Sem limite de indicações",
 ];
 
-const duvidas = [
+const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
   {
     pergunta: "Preciso ser corretor para indicar um imóvel?",
     resposta:
-      "Não. Qualquer pessoa pode indicar um imóvel que um amigo, parente ou conhecido esteja vendendo.",
+      "Não. Qualquer pessoa física maior de 18 anos, com CPF regular, pode indicar um imóvel que um amigo ou conhecido esteja vendendo. Imóveis do próprio indicador ou de parentes até segundo grau (pais, filhos, irmãos, avós e netos) não entram no programa, e funcionários, colaboradores e corretores do Grupo Prosperar não podem participar.",
   },
   {
     pergunta: "Quando eu recebo a bonificação?",
-    resposta: `Você recebe assim que o proprietário autorizar formalmente a ${site.nome} a anunciar o imóvel para venda (captação). O valor é ${site.valorSemExclusividade} ou ${site.valorComExclusividade}, conforme o contrato de exclusividade assinado pelo proprietário. Não é necessário esperar a venda ser concluída: o pagamento é feito via Pix em até 10 dias úteis após a confirmação da captação.`,
+    resposta: `A bonificação é paga via Pix em até 10 dias úteis após a captação confirmada, isto é, depois que o proprietário autoriza formalmente a ${site.nome} a anunciar o imóvel para venda. Não é necessário esperar a venda. O valor é ${site.valorSemExclusividade} ou ${site.valorComExclusividade}, conforme o contrato de exclusividade assinado pelo proprietário. Se você não informar a chave Pix no formulário, o prazo começa a contar quando ela for enviada.`,
   },
   {
     pergunta: "Por que existem dois valores?",
@@ -49,6 +49,19 @@ const duvidas = [
     pergunta: "E se o proprietário não quiser fechar com vocês?",
     resposta:
       "Se não conseguirmos autorização para anunciar o imóvel, a indicação não gera pagamento. Por isso é importante que o proprietário esteja de fato buscando vender e aberto ao contato.",
+  },
+  {
+    pergunta: "Quando a indicação não é válida?",
+    resposta: "A indicação não gera bonificação quando:",
+    itens: [
+      "o proprietário não autoriza a Prosperar Imóveis a anunciar o imóvel;",
+      "o imóvel já está anunciado em portais como Zap, OLX, QuintoAndar ou VivaReal na data da indicação;",
+      "o imóvel já está captado ou em negociação com outra imobiliária;",
+      "o imóvel já está na carteira da Prosperar Imóveis ou já foi indicado por outra pessoa (vale a primeira indicação);",
+      "o imóvel é do próprio indicador ou de parente até segundo grau;",
+      "as informações estão incompletas ou incorretas, ou o contato do proprietário é inválido;",
+      "há fraude, simulação ou má-fé.",
+    ],
   },
   {
     pergunta: "Posso indicar mais de um imóvel?",
@@ -89,7 +102,7 @@ export default function Home() {
               <span className="hidden sm:inline">Facebook</span>
             </a>
           </div>
-          <span className="whitespace-nowrap font-bold text-[#009cb4]">CRECI {site.creci}</span>
+          <span className="whitespace-nowrap font-bold text-[#009cb4]">CRECI/SP {site.creci}</span>
         </div>
       </div>
       <header className="sticky top-0 z-30 border-b border-neutral-100 bg-white/95 backdrop-blur">
@@ -121,8 +134,8 @@ export default function Home() {
                 <span className="whitespace-nowrap text-[#009cb4]">{site.valorFaixa}</span>.
               </h1>
               <p className="mt-5 text-base text-neutral-600 sm:text-lg">
-                Você indica e a gente cuida de tudo. Recebe assim que o imóvel
-                for autorizado para anúncio — sem esperar a venda.
+                Você indica e a gente cuida de tudo. Você recebe em até 10 dias
+                úteis após a captação confirmada — sem esperar a venda.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
                 <a href="#indicar" className="rounded-full bg-[#009cb4] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#009cb4]/25 transition hover:bg-[#007585]">
@@ -183,7 +196,7 @@ export default function Home() {
               <h2 className="mt-2 text-3xl font-extrabold text-[#3f3f3f] sm:text-4xl">Como funciona a indicação</h2>
               <p className="mt-3 text-neutral-600">
                 Simples assim: você indica, a gente cuida do resto. O pagamento é
-                garantido pela captação — a venda em si não precisa ter sido concluída.
+                feito após a captação confirmada — a venda em si não precisa ter sido concluída.
               </p>
             </div>
             <div className="relative mt-10 grid gap-8 md:mt-14 md:grid-cols-3">
@@ -206,10 +219,11 @@ export default function Home() {
             <div className="mt-10 flex items-start gap-3 rounded-2xl bg-white p-5 text-sm text-[#3f3f3f] sm:items-center sm:gap-4 sm:p-6 md:mt-14">
               <span className="inline-flex h-8 w-8 shrink-0 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-[#009cb4]/10 text-base font-bold text-[#009cb4]">!</span>
               <p>
-                <strong>Importante:</strong> este programa é destinado a pessoas
-                físicas maiores de 18 anos que queiram indicar imóveis para a{" "}
-                {site.nome} captar para venda. Não é necessário ser corretor para
-                indicar — basta conhecer alguém que esteja vendendo um imóvel.{" "}
+                <strong>Importante:</strong> o programa é destinado a pessoas
+                físicas maiores de 18 anos, com CPF regular. Não é necessário ser
+                corretor para indicar. Funcionários, colaboradores e corretores do
+                Grupo Prosperar não podem participar, e imóveis do próprio indicador
+                ou de parentes até segundo grau não geram bonificação.{" "}
                 <a href={site.regulamento} className="font-semibold text-[#007585] underline underline-offset-2">
                   Confira o regulamento completo
                 </a>
@@ -227,7 +241,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-linear-to-br from-[#009cb4]/95 via-[#00879c]/92 to-[#005d6b]/95" />
                 <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -right-16 h-64 w-64 rounded-full bg-white/10" />
                 <div className="relative flex h-full flex-col justify-center">
-                  <h2 className="text-2xl font-extrabold text-white sm:text-3xl">Indicação simples</h2>
+                  <h2 className="text-2xl font-extrabold text-white sm:text-3xl">Quanto você ganha</h2>
                   <div className="mt-4 w-fit rounded-2xl bg-white px-4 py-3 shadow-lg shadow-black/10">
                     <p className="text-xl font-extrabold leading-tight text-[#007585] sm:text-2xl">{site.valorFaixa}</p>
                     <p className="text-xs text-neutral-600 sm:text-sm">por captação confirmada</p>
@@ -273,6 +287,13 @@ export default function Home() {
                     <span className="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#009cb4]/10 text-base text-[#009cb4] transition group-open:rotate-45">+</span>
                   </summary>
                   <p className="mt-3 text-sm text-neutral-600">{d.resposta}</p>
+                  {d.itens && (
+                    <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-600">
+                      {d.itens.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </details>
               ))}
             </div>
