@@ -4,7 +4,7 @@ export const site = {
   telefone: "(14) 99606-1900",
   whatsapp: "https://wa.me/5514996061900",
   instagram: "https://www.instagram.com/somosprosperar/",
-  facebook: "https://www.facebook.com/priscillalima.corretora",
+  facebook: "https://www.facebook.com/share/1HQSiDtytF/",
   email: "contato@prosperarimoveis.com.br",
   // Dados da empresa conforme o regulamento do programa.
   razaoSocial: "Prosperar Participações e Administração de Bens Ltda.",
