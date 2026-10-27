@@ -16,8 +16,7 @@ export const site = {
   valorComExclusividade: "R$ 150",
   valorFaixa: "R$ 100 a R$ 150",
   regulamento: "/regulamento",
-  // A proteção de dados (LGPD) está na seção 10 do regulamento.
-  politicaPrivacidade: "/regulamento#da-protecao-de-dados-lgpd",
+  politicaPrivacidade: "/politica-de-privacidade",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
   // Para trocar, salve a nova foto em public/images/ e altere o caminho aqui.
   imagemCasa: "/images/casa.jpg",
