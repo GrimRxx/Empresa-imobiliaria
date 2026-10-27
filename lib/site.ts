@@ -8,7 +8,7 @@ export const site = {
   email: "contato@prosperarimoveis.com.br",
   // Dados da empresa conforme o regulamento do programa.
   razaoSocial: "Prosperar Participações e Administração de Bens Ltda.",
-  cnpj: "52.187.664/0001-05",
+  cnpj: "22.529.092/0001-34",
   endereco: "Avenida Dr. Vital Brasil, 1250, Vila São Lúcio, Botucatu, SP, CEP 18603-193",
   mapa: "https://www.google.com/maps/search/?api=1&query=Avenida+Dr.+Vital+Brasil+1250+Botucatu+SP",
   // Valor pago por captação: depende do contrato assinado pelo proprietário.

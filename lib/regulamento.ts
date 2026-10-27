@@ -5,7 +5,7 @@ export const regulamento = {
     "Prosperar Imóveis — CRECI/SP 053790-J",
     "Vigência: a partir de outubro de 2026",
     "Razão social: Prosperar Participações e Administração de Bens Ltda.",
-    "CNPJ: 52.187.664/0001-05",
+    "CNPJ: 22.529.092/0001-34",
     "Endereço: Avenida Dr. Vital Brasil, 1250 — Vila São Lúcio, Botucatu/SP — CEP 18603-193",
     "Contato: contato@prosperarimoveis.com.br | (14) 99606-1900"
   ],
