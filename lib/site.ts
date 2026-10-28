@@ -13,8 +13,8 @@ export const site = {
   mapa: "https://www.google.com/maps/search/?api=1&query=Avenida+Dr.+Vital+Brasil+1250+Botucatu+SP",
   // Valor pago por captação: depende do contrato assinado pelo proprietário.
   valorSemExclusividade: "R$ 50",
-  valorComExclusividade: "R$ 150",
-  valorFaixa: "R$ 50 a R$ 150",
+  valorComExclusividade: "R$ 100",
+  valorFaixa: "R$ 50 a R$ 100",
   regulamento: "/regulamento",
   politicaPrivacidade: "/politica-de-privacidade",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
