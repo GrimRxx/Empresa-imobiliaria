@@ -35,7 +35,7 @@ const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
   {
     pergunta: "Preciso ser corretor para indicar um imóvel?",
     resposta:
-      "Não. Qualquer pessoa física maior de 18 anos, com CPF regular, pode indicar um imóvel que um amigo ou conhecido esteja vendendo. Imóveis do próprio indicador ou de parentes até segundo grau (pais, filhos, irmãos, avós e netos) não entram no programa, e funcionários, colaboradores e corretores da Prosperar Imóveis não podem participar.",
+      "Não. Qualquer pessoa física maior de 18 anos, com CPF regular, pode indicar um imóvel que um amigo, parente ou conhecido esteja vendendo. Só funcionários, colaboradores e corretores da Prosperar Imóveis não podem participar.",
   },
   {
     pergunta: "Quando eu recebo a bonificação?",
@@ -43,7 +43,7 @@ const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
   },
   {
     pergunta: "Por que existem dois valores?",
-    resposta: `O valor depende do contrato que o proprietário assinar: ${site.valorSemExclusividade} quando a captação é sem exclusividade (o imóvel pode ficar anunciado também por outras imobiliárias) e ${site.valorComExclusividade} quando o proprietário assina contrato de exclusividade de 90 dias com a ${site.nome}. Quem decide é o proprietário — você recebe conforme o contrato fechado.`,
+    resposta: `O valor depende do contrato que o proprietário assinar: ${site.valorSemExclusividade} quando a captação é sem exclusividade (o imóvel pode ficar anunciado também por outras imobiliárias) e ${site.valorComExclusividade} quando o proprietário assina contrato de exclusividade de 90 dias com a ${site.nome}. Nos dois casos, o proprietário assina uma autorização de divulgação de no mínimo 90 dias. Quem decide sobre a exclusividade é o proprietário — você recebe conforme o contrato fechado.`,
   },
   {
     pergunta: "E se o proprietário não quiser fechar com vocês?",
@@ -58,7 +58,6 @@ const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
       "nas captações com exclusividade: o imóvel já está anunciado em portais como Zap, OLX, QuintoAndar ou VivaReal na data da indicação;",
       "nas captações com exclusividade: o imóvel já está captado ou em negociação com outra imobiliária;",
       "o imóvel já está na carteira da Prosperar Imóveis ou já foi indicado por outra pessoa (vale a primeira indicação);",
-      "o imóvel é do próprio indicador ou de parente até segundo grau;",
       "as informações estão incompletas ou incorretas, ou o contato do proprietário é inválido;",
       "há fraude, simulação ou má-fé.",
     ],
@@ -221,9 +220,8 @@ export default function Home() {
               <p>
                 <strong>Importante:</strong> o programa é destinado a pessoas
                 físicas maiores de 18 anos, com CPF regular. Não é necessário ser
-                corretor para indicar. Funcionários, colaboradores e corretores da
-                Prosperar Imóveis não podem participar, e imóveis do próprio indicador
-                ou de parentes até segundo grau não geram bonificação.{" "}
+                corretor para indicar. Só funcionários, colaboradores e corretores
+                da Prosperar Imóveis não podem participar.{" "}
                 <a href={site.regulamento} className="font-semibold text-[#007585] underline underline-offset-2">
                   Confira o regulamento completo
                 </a>

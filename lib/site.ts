@@ -12,9 +12,9 @@ export const site = {
   endereco: "Avenida Dr. Vital Brasil, 1250, Vila São Lúcio, Botucatu, SP, CEP 18603-193",
   mapa: "https://www.google.com/maps/search/?api=1&query=Avenida+Dr.+Vital+Brasil+1250+Botucatu+SP",
   // Valor pago por captação: depende do contrato assinado pelo proprietário.
-  valorSemExclusividade: "R$ 100",
+  valorSemExclusividade: "R$ 50",
   valorComExclusividade: "R$ 150",
-  valorFaixa: "R$ 100 a R$ 150",
+  valorFaixa: "R$ 50 a R$ 150",
   regulamento: "/regulamento",
   politicaPrivacidade: "/politica-de-privacidade",
   // Foto da casa usada na seção "A Prosperar" e ao lado do formulário.
