@@ -5,7 +5,7 @@ export const site = {
   whatsapp: "https://wa.me/5514996061900",
   instagram: "https://www.instagram.com/somosprosperar/",
   facebook: "https://www.facebook.com/share/1HQSiDtytF/",
-  email: "contato@prosperarimoveis.com.br",
+  email: "contato@imoveisprosperar.com.br",
   // Dados da empresa conforme o regulamento do programa.
   razaoSocial: "Prosperar Participações e Administração de Bens Ltda.",
   cnpj: "22.529.092/0001-34",

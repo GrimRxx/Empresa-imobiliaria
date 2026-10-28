@@ -35,7 +35,7 @@ const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
   {
     pergunta: "Preciso ser corretor para indicar um imóvel?",
     resposta:
-      "Não. Qualquer pessoa física maior de 18 anos, com CPF regular, pode indicar um imóvel que um amigo ou conhecido esteja vendendo. Imóveis do próprio indicador ou de parentes até segundo grau (pais, filhos, irmãos, avós e netos) não entram no programa, e funcionários, colaboradores e corretores do Grupo Prosperar não podem participar.",
+      "Não. Qualquer pessoa física maior de 18 anos, com CPF regular, pode indicar um imóvel que um amigo ou conhecido esteja vendendo. Imóveis do próprio indicador ou de parentes até segundo grau (pais, filhos, irmãos, avós e netos) não entram no programa, e funcionários, colaboradores e corretores da Prosperar Imóveis não podem participar.",
   },
   {
     pergunta: "Quando eu recebo a bonificação?",
@@ -221,8 +221,8 @@ export default function Home() {
               <p>
                 <strong>Importante:</strong> o programa é destinado a pessoas
                 físicas maiores de 18 anos, com CPF regular. Não é necessário ser
-                corretor para indicar. Funcionários, colaboradores e corretores do
-                Grupo Prosperar não podem participar, e imóveis do próprio indicador
+                corretor para indicar. Funcionários, colaboradores e corretores da
+                Prosperar Imóveis não podem participar, e imóveis do próprio indicador
                 ou de parentes até segundo grau não geram bonificação.{" "}
                 <a href={site.regulamento} className="font-semibold text-[#007585] underline underline-offset-2">
                   Confira o regulamento completo

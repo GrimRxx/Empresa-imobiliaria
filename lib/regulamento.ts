@@ -7,7 +7,7 @@ export const regulamento = {
     "Razão social: Prosperar Participações e Administração de Bens Ltda.",
     "CNPJ: 22.529.092/0001-34",
     "Endereço: Avenida Dr. Vital Brasil, 1250 — Vila São Lúcio, Botucatu/SP — CEP 18603-193",
-    "Contato: contato@prosperarimoveis.com.br | (14) 99606-1900"
+    "Contato: contato@imoveisprosperar.com.br | (14) 99606-1900"
   ],
   "secoes": [
     {
@@ -25,7 +25,7 @@ export const regulamento = {
       "itens": [
         "2.1. Podem participar pessoas físicas, maiores de 18 anos, com CPF regular, que conheçam um imóvel à venda e tenham autorização do proprietário para compartilhar seus dados de contato.",
         "2.2. Não é necessário ser corretor de imóveis para participar.",
-        "2.3. Não podem participar: a) funcionários, colaboradores e corretores da Prosperar Imóveis e das demais empresas do Grupo Prosperar; b) pessoas jurídicas; c) menores de 18 anos."
+        "2.3. Não podem participar: a) funcionários, colaboradores e corretores da Prosperar Imóveis; b) pessoas jurídicas; c) menores de 18 anos."
       ]
     },
     {
@@ -44,8 +44,8 @@ export const regulamento = {
         "4.1. O indicador receberá bonificação única por imóvel captado, nos seguintes valores:",
         "a) R$ 100,00 (cem reais) — quando a captação for realizada SEM contrato de exclusividade;",
         "b) R$ 150,00 (cento e cinquenta reais) — quando a captação for realizada COM contrato de exclusividade de venda pelo prazo de 90 (noventa) dias, assinado pelo proprietário.",
-        "4.2. Considera-se captação confirmada o momento em que o proprietário autoriza formalmente a Prosperar Imóveis a anunciar o imóvel para venda (assinatura do contrato de captação). Não é necessário aguardar a conclusão da venda.",
-        "4.3. O valor da bonificação é definido pelo contrato efetivamente assinado pelo proprietário, e não pela escolha do indicador.",
+        "4.2. Considera-se captação confirmada o momento em que o proprietário autoriza formalmente a Prosperar Imóveis a anunciar o imóvel para venda (assinatura do contrato de captação). Não é necessário aguardar a conclusão da venda. O indicador receberá a confirmação da captação pelo e-mail ou pelo telefone/WhatsApp informado no formulário.",
+        "4.3. O valor da bonificação é definido pelo tipo de contrato efetivamente assinado pelo proprietário, e não pela escolha do indicador.",
         "4.4. A bonificação é única por imóvel: não há pagamento adicional pela venda, pela locação ou por novas captações do mesmo imóvel.",
         "4.5. Não há limite de indicações por participante: cada imóvel captado a partir de uma indicação válida gera uma nova bonificação."
       ]
@@ -108,7 +108,7 @@ export const regulamento = {
       "itens": [
         "10.1. Os dados pessoais informados no formulário — do indicador e do proprietário — são tratados pela Prosperar Imóveis exclusivamente para as finalidades do Programa, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e a Política de Privacidade publicada na página do Programa.",
         "10.2. O indicador declara ter autorização do proprietário para compartilhar os dados dele e é responsável pelas informações prestadas.",
-        "10.3. O titular dos dados, indicador ou proprietário, pode solicitar acesso, correção ou exclusão pelo e-mail contato@prosperarimoveis.com.br ou pelo telefone (14) 99606-1900."
+        "10.3. O titular dos dados, indicador ou proprietário, pode solicitar acesso, correção ou exclusão pelo e-mail contato@imoveisprosperar.com.br ou pelo telefone (14) 99606-1900."
       ]
     },
     {
@@ -118,7 +118,7 @@ export const regulamento = {
         "11.1. A participação no Programa implica aceitação integral deste Regulamento.",
         "11.2. A Prosperar Imóveis pode alterar valores, condições ou encerrar o Programa a qualquer momento, sem prejuízo das bonificações já confirmadas antes da alteração. As alterações valem para indicações enviadas a partir da publicação da nova versão deste Regulamento.",
         "11.3. Os casos omissos serão decididos pela Prosperar Imóveis, à luz da boa-fé e das regras deste Regulamento.",
-        "11.4. Dúvidas sobre o Programa devem ser encaminhadas para contato@prosperarimoveis.com.br ou (14) 99606-1900.",
+        "11.4. Dúvidas sobre o Programa devem ser encaminhadas para contato@imoveisprosperar.com.br ou (14) 99606-1900.",
         "11.5. Fica eleito o foro da comarca de Botucatu/SP para dirimir questões oriundas deste Regulamento."
       ]
     }
