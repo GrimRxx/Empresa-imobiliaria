@@ -65,8 +65,8 @@ export const regulamento = {
       "itens": [
         "6.1. A indicação não gera bonificação nas seguintes hipóteses:",
         "a) o proprietário não autorizar a Prosperar Imóveis a anunciar o imóvel;",
-        "b) o imóvel já estiver anunciado em portais imobiliários (Zap, OLX, QuintoAndar, VivaReal ou similares) na data da indicação;",
-        "c) o imóvel já estiver captado ou em negociação por outra imobiliária, de forma comprovada, na data da indicação;",
+        "b) nas captações com exclusividade, o imóvel já estiver anunciado em portais imobiliários (Zap, OLX, QuintoAndar, VivaReal ou similares) na data da indicação;",
+        "c) nas captações com exclusividade, o imóvel já estiver captado ou em negociação por outra imobiliária, de forma comprovada, na data da indicação;",
         "d) o imóvel já constar na carteira da Prosperar Imóveis ou já tiver sido indicado anteriormente por outra pessoa, prevalecendo sempre a primeira indicação recebida;",
         "e) o imóvel for de propriedade do próprio indicador ou de parente até segundo grau;",
         "f) as informações prestadas estiverem incompletas ou incorretas, ou o contato do proprietário for inválido;",

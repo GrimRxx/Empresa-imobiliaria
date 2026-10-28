@@ -55,8 +55,8 @@ const duvidas: { pergunta: string; resposta: string; itens?: string[] }[] = [
     resposta: "A indicação não gera bonificação quando:",
     itens: [
       "o proprietário não autoriza a Prosperar Imóveis a anunciar o imóvel;",
-      "o imóvel já está anunciado em portais como Zap, OLX, QuintoAndar ou VivaReal na data da indicação;",
-      "o imóvel já está captado ou em negociação com outra imobiliária;",
+      "nas captações com exclusividade: o imóvel já está anunciado em portais como Zap, OLX, QuintoAndar ou VivaReal na data da indicação;",
+      "nas captações com exclusividade: o imóvel já está captado ou em negociação com outra imobiliária;",
       "o imóvel já está na carteira da Prosperar Imóveis ou já foi indicado por outra pessoa (vale a primeira indicação);",
       "o imóvel é do próprio indicador ou de parente até segundo grau;",
       "as informações estão incompletas ou incorretas, ou o contato do proprietário é inválido;",
