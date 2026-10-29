@@ -31,7 +31,7 @@ valor desejado, observações e chave Pix). Se um dos dois falhar, o outro ainda
 recebe e a falha fica registrada no log do servidor.
 
 Depois de enviar, a pessoa vê na tela: "Indicação enviada! Entraremos em contato
-em até 48h." 
+em até 2 dias úteis."
 
 ## Trocar a foto da casa
 
@@ -43,5 +43,6 @@ formulário.
 ## Hospedagem
 
 Como existe a parte de servidor (`/api/indicacao`), o site não pode mais ser
-exportado como HTML estático. Publique em um serviço que rode Next.js, como a
-Vercel (é só importar o repositório).
+exportado como HTML estático. Ele está publicado na Netlify, que publica de novo a
+cada envio para este branch. Commits com `[skip netlify]` na mensagem não são
+publicados (economiza créditos); o próximo envio sem essa marca publica tudo.
