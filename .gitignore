@@ -10,3 +10,7 @@ next-env.d.ts
 
 # pacotes gerados para visualização/download
 *.zip
+
+# Cloudflare (wrangler) local
+.wrangler/
+.dev.vars

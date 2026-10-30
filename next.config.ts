@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 90 é usado na foto da casa, que já vem comprimida da origem.
-  images: { qualities: [75, 90] },
+  // Site 100% estático (pasta out/), publicado no Cloudflare Pages. O envio do
+  // formulário fica em functions/api/indicacao.ts.
+  output: "export",
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
