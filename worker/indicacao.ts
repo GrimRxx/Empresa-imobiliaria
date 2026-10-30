@@ -1,11 +1,11 @@
-// Recebe o formulário do site (Cloudflare Pages Function em /api/indicacao).
+// Recebe o formulário do site (POST /api/indicacao), chamado por worker/index.ts.
 // A indicação é repassada para o Apps Script da planilha Google, que grava a
 // linha e envia o e-mail para a imobiliária (docs/google-sheets-apps-script.js).
-import { validarIndicacao } from "../../lib/indicacao";
+import { validarIndicacao } from "../lib/indicacao";
 
-type Contexto = {
-  request: Request;
-  env: { INDICACAO_WEBHOOK_URL?: string };
+export type Env = {
+  INDICACAO_WEBHOOK_URL?: string;
+  ASSETS: { fetch(request: Request): Promise<Response> };
 };
 
 // Limite simples por IP para evitar spam (por instância do servidor).
@@ -48,7 +48,7 @@ async function enviarWebhook(url: string, dados: object) {
   }
 }
 
-export async function onRequestPost({ request, env }: Contexto) {
+export async function receberIndicacao(request: Request, env: Env) {
   let corpo: Record<string, unknown>;
   try {
     corpo = await request.json();

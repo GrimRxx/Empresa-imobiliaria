@@ -1,7 +1,7 @@
 # Prosperar Imóveis – Página de indicação
 
-Página "Indique um imóvel e ganhe", feita em Next.js + Tailwind CSS e publicada no
-Cloudflare Pages.
+Página "Indique um imóvel e ganhe", feita em Next.js + Tailwind CSS e publicada como
+Worker no Cloudflare.
 
 ## Rodar no computador
 
@@ -16,14 +16,14 @@ Para testar também o envio do formulário, gere o site e rode com o wrangler
 
 ```bash
 npm run build
-npx wrangler pages dev out
+npx wrangler dev
 ```
 
 ## Para onde vão as indicações
 
-O site é estático (pasta `out/`). O formulário envia os dados para
-`functions/api/indicacao.ts`, uma função do Cloudflare Pages que valida tudo de
-novo, bloqueia spam (campo invisível + limite por IP) e repassa a indicação para
+O site é estático (pasta `out/`), servido pelo Worker `worker/index.ts`
+(configuração em `wrangler.jsonc`). O formulário envia os dados para
+`/api/indicacao` (`worker/indicacao.ts`), que valida tudo de novo, bloqueia spam (campo invisível + limite por IP) e repassa a indicação para
 o **Apps Script da planilha Google** (`INDICACAO_WEBHOOK_URL`).
 
 O Apps Script (`docs/google-sheets-apps-script.js`, instalado na conta Google da
@@ -44,9 +44,11 @@ formulário.
 
 ## Hospedagem
 
-Cloudflare Pages, ligado a este repositório: cada envio para o branch de
-produção publica o site sozinho.
+Cloudflare Workers, ligado a este repositório (Workers & Pages > projeto >
+Settings > Build): cada envio para o branch de produção publica o site sozinho.
 
 - Build command: `npm run build`
-- Build output directory: `out`
-- Variáveis: `INDICACAO_WEBHOOK_URL` (URL do Apps Script) e `NODE_VERSION=22`
+- Deploy command: `npx wrangler deploy`
+- Node: versão 22 (arquivo `.node-version`)
+- Variável (Settings > Variables and Secrets): `INDICACAO_WEBHOOK_URL`, a URL
+  do Apps Script
