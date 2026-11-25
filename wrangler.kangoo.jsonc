@@ -1,0 +1,18 @@
+// Mesma página, publicada na conta Cloudflare onde está o domínio
+// imoveisprosperar.com.br (conta da agência Kangoo), servida direto em
+// indique.imoveisprosperar.com.br.
+// Publicar: npm run build && npx wrangler deploy -c wrangler.kangoo.jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "prosperar-indicacoes",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  },
+  "routes": [{ "pattern": "indique.imoveisprosperar.com.br", "custom_domain": true }],
+  "workers_dev": false,
+  "observability": { "enabled": true }
+}
