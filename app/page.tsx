@@ -1,6 +1,15 @@
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiCheck } from "react-icons/fi";
+import {
+  HiOutlineChartBar,
+  HiOutlineDocumentCheck,
+  HiOutlineHome,
+  HiOutlineKey,
+  HiOutlineMegaphone,
+  HiOutlinePresentationChartLine,
+  HiOutlineUserGroup,
+} from "react-icons/hi2";
 import IndicacaoForm from "@/components/IndicacaoForm";
 import Rodape from "@/components/Rodape";
 import { site } from "@/lib/site";
@@ -23,7 +32,19 @@ const passos = [
   },
 ];
 
-const valores = ["Séria", "Moderna", "Sólida", "Sábia"];
+const servicos = [
+  { titulo: "Comprar", texto: "Encontre o imóvel ideal para o seu momento.", Icone: HiOutlineHome },
+  { titulo: "Vender", texto: "Conte com nossa equipe para vender com segurança.", Icone: HiOutlineKey },
+  { titulo: "Anunciar", texto: "Seu imóvel com mais visibilidade e resultados.", Icone: HiOutlineMegaphone },
+  { titulo: "Indicar", texto: "Indique e ganhe com a gente.", Icone: HiOutlineUserGroup },
+];
+
+const diferenciais = [
+  { texto: "Documentação conferida e regularizada com você", Icone: HiOutlineDocumentCheck },
+  { texto: "Preço justo pela norma ABNT, com estudo de mercado", Icone: HiOutlineChartBar },
+  { texto: "19 portais, redes sociais e mais de 400 corretores", Icone: HiOutlineMegaphone },
+  { texto: "Tráfego pago e relatório de desempenho a cada 15 dias", Icone: HiOutlinePresentationChartLine },
+];
 
 const vantagens = [
   "Você não precisa vender nada, só indicar",
@@ -161,27 +182,27 @@ export default function Home() {
                 <div className="absolute inset-0 bg-linear-to-t from-[#007585]/25 via-transparent to-transparent" />
               </div>
             </div>
-            <div className="mt-12 grid items-start gap-10 md:mt-16 md:grid-cols-2 md:gap-14">
-              <div>
-                <Selo>A Prosperar Imóveis</Selo>
-                <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#3f3f3f] sm:text-4xl">
-                  Melhor que enriquecer,{" "}
-                  <span className="text-[#009cb4]">prosperar é crescer junto</span>
-                </h2>
-                <p className="mt-4 text-neutral-600">
-                  Fazemos parte do Grupo Prosperar, que administra patrimônio,
-                  empreendimentos e negócios com solidez e visão de longo prazo.
-                  Nosso programa de indicação é uma forma de fazer quem está perto
-                  da gente prosperar também.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3 md:mt-12">
-                {valores.map((v) => (
-                  <div key={v} className="rounded-xl border border-[#009cb4]/15 bg-[#009cb4]/5 px-4 py-3 text-sm font-semibold text-[#007585]">
-                    {v}
-                  </div>
-                ))}
-              </div>
+            <div className="mx-auto mt-12 max-w-2xl text-center md:mt-16">
+              <Selo>Quem somos</Selo>
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#3f3f3f] sm:text-4xl">
+                Conectamos pessoas e{" "}
+                <span className="text-[#009cb4]">grandes oportunidades</span>
+              </h2>
+              <p className="mt-4 text-neutral-600">
+                Somos uma imobiliária que acredita no poder das indicações para
+                realizar mais sonhos.
+              </p>
+            </div>
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+              {servicos.map(({ titulo, texto, Icone }) => (
+                <div key={titulo} className="rounded-2xl border border-[#009cb4]/15 bg-[#009cb4]/5 p-4 text-center sm:p-6">
+                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#009cb4] shadow-sm sm:h-12 sm:w-12">
+                    <Icone className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-3 font-bold text-[#3f3f3f]">{titulo}</h3>
+                  <p className="mt-1 text-xs text-neutral-600 sm:text-sm">{texto}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -229,7 +250,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="indicar" className="scroll-mt-20 bg-white py-12 sm:py-16 md:py-24">
+        <section id="anunciar" className="scroll-mt-20 bg-white py-16 md:py-24">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14">
+            <div>
+              <Selo>Por que anunciar com a Prosperar</Selo>
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#3f3f3f] sm:text-4xl">
+                Mais visibilidade, segurança e{" "}
+                <span className="text-[#009cb4]">melhores resultados</span>
+              </h2>
+              <p className="mt-4 text-neutral-600">
+                É isso que o proprietário que você indicar vai encontrar ao
+                anunciar o imóvel com a gente.
+              </p>
+            </div>
+            <ul className="space-y-3">
+              {diferenciais.map(({ texto, Icone }) => (
+                <li key={texto} className="flex items-center gap-4 rounded-2xl border border-[#009cb4]/15 bg-[#009cb4]/5 p-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#009cb4] shadow-sm">
+                    <Icone className="h-6 w-6" />
+                  </span>
+                  <span className="font-semibold text-[#3f3f3f]">{texto}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section id="indicar" className="scroll-mt-20 bg-[#f6f6f5] py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="grid overflow-hidden rounded-3xl sm:rounded-[2rem] shadow-xl shadow-black/5 ring-1 ring-neutral-100 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
               <div className="relative overflow-hidden bg-[#007585] p-6 sm:p-10">
@@ -271,7 +318,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="duvidas" className="scroll-mt-20 bg-[#f6f6f5] py-16 md:py-24">
+        <section id="duvidas" className="scroll-mt-20 bg-white py-16 md:py-24">
           <div className="mx-auto max-w-3xl px-6">
             <span className="text-xs font-bold uppercase tracking-widest text-[#009cb4]">Tire suas dúvidas</span>
             <h2 className="mt-2 text-3xl font-extrabold text-[#3f3f3f]">Dúvidas frequentes</h2>
