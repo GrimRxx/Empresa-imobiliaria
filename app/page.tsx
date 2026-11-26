@@ -42,8 +42,8 @@ const servicos = [
 const diferenciais = [
   { texto: "Documentação conferida e regularizada com você", Icone: HiOutlineDocumentCheck },
   { texto: "Preço justo pela norma ABNT, com estudo de mercado", Icone: HiOutlineChartBar },
-  { texto: "19 portais, redes sociais e mais de 400 corretores", Icone: HiOutlineMegaphone },
-  { texto: "Tráfego pago e relatório de desempenho a cada 15 dias", Icone: HiOutlinePresentationChartLine },
+  { texto: "19 portais, redes sociais e parceria com mais de 400 corretores", Icone: HiOutlineMegaphone },
+  { texto: "Tráfego pago e relatório de desempenho a cada 15 dias para clientes com exclusividade", Icone: HiOutlinePresentationChartLine },
 ];
 
 const vantagens = [

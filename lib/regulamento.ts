@@ -42,7 +42,7 @@ export const regulamento = {
       "titulo": "4. Da bonificação",
       "itens": [
         "4.1. O indicador receberá bonificação única por imóvel captado, nos seguintes valores:",
-        "a) R$ 40,00 (quarenta reais) — quando a captação for realizada SEM contrato de exclusividade;",
+        "a) R$ 50,00 (cinquenta reais) — quando a captação for realizada SEM contrato de exclusividade;",
         "b) R$ 150,00 (cento e cinquenta reais) — quando a captação for realizada COM contrato de exclusividade de venda pelo prazo de 90 (noventa) dias, assinado pelo proprietário.",
         "4.2. Considera-se captação confirmada o momento em que o proprietário autoriza formalmente a Prosperar Imóveis a anunciar o imóvel para venda (assinatura do contrato de captação). Não é necessário aguardar a conclusão da venda. O indicador receberá a confirmação da captação pelo e-mail ou pelo telefone/WhatsApp informado no formulário.",
         "4.3. O valor da bonificação é definido pelo tipo de contrato efetivamente assinado pelo proprietário, e não pela escolha do indicador.",
@@ -56,7 +56,7 @@ export const regulamento = {
       "itens": [
         "5.1. A exclusividade é um contrato entre o PROPRIETÁRIO do imóvel e a Prosperar Imóveis, pelo qual o proprietário se compromete a anunciar o imóvel exclusivamente pela Prosperar Imóveis pelo prazo de 90 dias.",
         "5.2. A decisão sobre exclusividade é exclusiva do proprietário. O indicador não interfere nessa decisão e receberá a bonificação conforme o contrato assinado.",
-        "5.3. Se o proprietário optar por anunciar o imóvel também por outras imobiliárias (captação sem exclusividade), a bonificação será de R$ 40,00.",
+        "5.3. Se o proprietário optar por anunciar o imóvel também por outras imobiliárias (captação sem exclusividade), a bonificação será de R$ 50,00.",
         "5.4. Mesmo nas captações sem exclusividade, o proprietário assina contrato de autorização de divulgação do imóvel pela Prosperar Imóveis com prazo mínimo de 90 (noventa) dias. A captação só é considerada confirmada, para fins de bonificação, com a assinatura desse contrato."
       ]
     },
